@@ -1,0 +1,57 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.scene {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background: #01070a;
+  overflow: hidden;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.scene i {
+  position: absolute;
+  top: -250px;
+  background: #8a8a8a;
+  box-shadow: 0 0 10px white;
+  animation: movingStars linear infinite;
+}
+
+@keyframes movingStars {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(120vh);
+  }
+}
+
+.scene .rocket {
+  z-index: 1;
+  position: relative;
+  animation: liftoff 0.2s ease infinite;
+}
+
+.scene .rocket::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -195px;
+  transform: translateX(-50%);
+  width: 10px;
+  height: 200px;
+  background: linear-gradient(#ff7b00, transparent);
+  filter: blur(1px);
+}
+
+@keyframes liftoff {
+  0% {
+    transform: translateY(-2px);
+  }
+}
