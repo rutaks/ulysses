@@ -9,6 +9,6 @@ A currated list of UI/Animation projects based on HTML,CSS,JS
 ### Clone The Repo:
 
 ```
-$ git clone https://github.com/rutaks/
-$ cd 
+$ git clone https://github.com/rutaks/ulysses
+$ cd ./ulysses/
 ```
