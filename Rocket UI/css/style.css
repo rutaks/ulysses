@@ -5,6 +5,7 @@
 }
 
 .scene {
+  position: relative;
   width: 100%;
   height: 100vh;
   background: #01070a;
@@ -14,7 +15,25 @@
   align-items: center;
 }
 
+.scene i {
+  position: absolute;
+  top: -250px;
+  background: #8a8a8a;
+  box-shadow: 0 0 10px white;
+  animation: movingStars linear infinite;
+}
+
+@keyframes movingStars {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(120vh);
+  }
+}
+
 .scene .rocket {
+  z-index: 1;
   position: relative;
   animation: liftoff 0.2s ease infinite;
 }
